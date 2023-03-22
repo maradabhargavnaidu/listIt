@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div
       className={
-        "font-medium p-6 fixed w-full top-0 " +
+        "font-medium p-6 fixed w-full transition-all transition-5000 ease-in-out top-0 " +
         (scrollColor ? "bg-white" : "bg-blue-500")
       }
     >

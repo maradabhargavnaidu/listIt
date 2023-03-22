@@ -20,7 +20,7 @@ const Header = () => {
             more convenient with a shopping list
           </p>
           <Link
-            to="/register"
+            to="/lists"
             className="text-md cursor-pointer bg-blue-500 text-white py-2 px-10 rounded-full border-solid border-2 border-white hover:bg-white hover:text-blue-500 hover:border-blue-500 font-semibold mt-5"
           >
             Get Started

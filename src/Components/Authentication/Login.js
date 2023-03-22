@@ -4,8 +4,8 @@ const Login = () => {
   return (
     <div className="bg-blue-500 min-h-screen">
       <div className="container flex flex-col items-center justify-center h-screen mx-auto px-5">
-        <form className="w-full max-w-md bg-white flex flex-col justify-center items-left space-y-4 rounded-md p-6 space-y-5">
-          <h1 className="font-medium text-2xl">Sign In to your account</h1>
+        <form className="w-full max-w-md bg-white flex flex-col justify-center items-left rounded-md p-6 space-y-3">
+          <h1 className="font-semibold text-2xl ">Sign In to your account</h1>
           <label>Your Email</label>
           <input
             type="email"
