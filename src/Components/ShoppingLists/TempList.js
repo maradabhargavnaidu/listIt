@@ -40,8 +40,8 @@ const TempList = () => {
   //     listBody.innerHTML = str;
   //   }
   return (
-    <div className="bg-blue-500 h-screen flex justify-center items-center">
-      <div className="bg-white w-full max-w-md flex flex-col space-y-3 p-4 rounded-md px-5 mx-auto">
+    <div className="bg-blue-500 h-screen flex justify-center items-center px-5">
+      <div className="bg-white w-full max-w-md flex flex-col space-y-3 p-4 rounded-md mx-auto container">
         <label>List Name</label>
         <input
           type="text"
