@@ -2,14 +2,31 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(true);
+  const [scrollColor, setScrollColor] = useState(false);
+  const changeNavBg = () => {
+    if (window.scrollY >= 80) {
+      setScrollColor(true);
+    } else {
+      setScrollColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavBg);
   return (
-    <div className="bg-blue-500 font-medium p-6 fixed w-full top-0">
+    <div
+      className={
+        "font-medium p-6 fixed w-full top-0 " +
+        (scrollColor ? "bg-white" : "bg-blue-500")
+      }
+    >
       <nav className="">
         <div className="flex justify-between container">
           <div>
             <Link
               to="/"
-              className="text-white text-3xl cursor-pointer py-8 font-bold md:text-5xl"
+              className={
+                "text-3xl cursor-pointer py-8 font-bold md:text-5xl " +
+                (scrollColor ? "text-blue-500" : "text-white")
+              }
             >
               List It
             </Link>
@@ -18,9 +35,21 @@ const Navbar = () => {
             className="flex flex-col space-y-1 cursor-pointer md:hidden"
             onClick={() => setMenuToggle(!menuToggle)}
           >
-            <span className="bg-white h-1 w-6 rounded"></span>
-            <span className="bg-white h-1 w-6 rounded"></span>
-            <span className="bg-white h-1 w-6 rounded"></span>
+            <span
+              className={
+                "h-1 w-6 rounded " + (scrollColor ? "bg-blue-500" : "bg-white")
+              }
+            ></span>
+            <span
+              className={
+                "h-1 w-6 rounded " + (scrollColor ? "bg-blue-500" : "bg-white")
+              }
+            ></span>
+            <span
+              className={
+                "h-1 w-6 rounded " + (scrollColor ? "bg-blue-500" : "bg-white")
+              }
+            ></span>
           </div>
           <div className="hidden md:flex space-x-7 items-center">
             <Link to="/" className="text-white text-lg cursor-pointer">
