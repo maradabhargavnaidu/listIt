@@ -4,7 +4,7 @@ const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(true);
   const [scrollColor, setScrollColor] = useState(false);
   const changeNavBg = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 10) {
       setScrollColor(true);
     } else {
       setScrollColor(false);
